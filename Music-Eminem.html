@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Music Page</title>
+</head>
+
+<body class="w-[430px] h-[932px] mx-auto">
+    <div class="bg-[url(./IMG/EminemShow-1.png)] bg-center bg-cover bg-no-repeat mx-auto">
+
+        <div class="w-[430px] h-[932px] backdrop-blur-md">
+            <nav>
+                <div class="pt-20 px-5 mb-3">
+                    <!-- <a href="#"><img src="./IMG/blue-search.png" alt="search"></a> -->
+                    <h1 class="text-blue-500 text-center text-3xl font-bold">Alb<span class="text-pink-500">um</span>
+                    </h1>
+                    <!-- <img class="cursor-pointer" src="./IMG/menu-list.png" alt="menu list"> -->
+                </div>
+            </nav>
+            <div class=" flex flex-col gap-15 mt-10">
+                <div>
+                    <img class="size-[350px] mx-auto mb-4" src="./IMG/EminemShow-1.png" alt="Eminem show">
+                    <div
+                        class="h-[35px] w-[350px] bg-[#630a4a] rounded-lg flex items-center justify-around mx-auto px-1">
+                        <a href="#">
+                            <div
+                                class="flex gap-3 bg-[#ee10b0] h-[29px] w-[175px] justify-center items-center rounded-lg">
+                                <img src="./IMG/mdi_music.png" alt="music icon">
+                                <span class="text-white text-[14px] font-extrabold">Song</span>
+                            </div>
+                        </a>
+                        <a href="./Music-lyric.html" target="_self">
+                            <div class="flex gap-3 h-[29px] w-[175px] justify-center items-center rounded-lg">
+                                <img src="./IMG/lyric-icon.png" alt="lyric icon">
+                                <span class="text-white text-[14px] font-extrabold">Lyrics</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6 mx-auto">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col gap-4 text-white">
+                            <h1 class="text-[32px] font-extrabold">White America</h1>
+                            <p class="text-[24px]">Eminem</p>
+                        </div>
+                        <img id="heart-icon" class="cursor-pointer self-end" src="./IMG/ph_heart-light.png"
+                            alt="heart-icon">
+                    </div>
+                    <img src="./IMG/equalizer.png" alt="equalizer">
+                    <div class="flex justify-evenly">
+                        <img id="repeat-icon" class="cursor-pointer size-12 self-center" src="./IMG/repeat-icon.png"
+                            alt="repeat-icon">
+                        <a class="self-center" href="./Music-Eminem.html"><img class="cursor-pointer size-12"
+                                src="./IMG/back-icon.png" alt="back-icon"></a>
+                        <img class="cursor-pointer play-music" src="./IMG/pink-play.png" alt="play">
+                        <a class="self-center" href="./Music-Eminem.html"><img class="cursor-pointer size-12"
+                                src="./IMG/next-icon.png" alt="next-icon"></a>
+                        <img src="./IMG/playlist-new.png" alt="playlist-new">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

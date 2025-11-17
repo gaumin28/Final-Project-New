@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Discover</title>
+</head>
+
+<body class="min-h-screen bg-[#412c3a] text-white">
+    <div class="flex flex-col md:flex-row max-w-full">
+        <!-- Mobile top bar -->
+        <header class="flex items-center justify-between p-4 md:hidden bg-[#0E1920]">
+            <div class="flex items-center gap-3">
+                <button id="toggleSidebar" aria-label="Toggle menu"
+                    class="p-2 rounded-md bg-pink-500 text-black font-bold">☰</button>
+                <h1
+                    class="text-lg font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                    Melodies
+                </h1>
+            </div>
+            <div class="flex gap-2 auth-area">
+                <a class="px-3 py-1 bg-black rounded-full text-pink-400 font-bold" href="./Login.html">Login</a>
+                <a class="px-3 py-1 bg-pink-500 rounded-full text-black font-bold" href="./SignUp.html">Sign Up</a>
+            </div>
+        </header>
+
+        <!-- sidebar -->
+        <aside id="sidebar"
+            class="side-bar bg-[#0E1920] text-white w-full md:w-64 p-6 flex flex-col space-y-6 hidden md:flex md:sticky md:top-0 md:h-screen md:overflow-y-auto shrink-0">
+            <h1
+                class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                Melodies</h1>
+
+            <!-- menu -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Menu</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./index.html"><span>🏠</span>
+                            Home</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔍</span>
+                            Discover</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./AlbumsResponsive.html"><span>📀</span>
+                            Albums</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./ArtistResponsive.html"><span>🎤</span>
+                            Artists</a></li>
+                </ul>
+            </div>
+
+            <!-- Library -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Library</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./RecentlyResponsive.html"><span>🕒</span> Recently Added</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./MostPlayedResponsive.html"><span>🔥</span> Most played</a></li>
+                </ul>
+            </div>
+
+            <!-- Playlist and favorite -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Playlist and favorite</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./FavouriteResponsive.html"><span>❤️</span> Your favorites</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./PlaylistResponsive.html"><span>📃</span> Your playlist</a></li>
+                    <!-- <li class="hover:bg-pink-500 hover:text-white rounded-[10px] pl-2 text-blue-300">
+                        <a href="#"><img class="w-4 inline-block mr-1" src="./IMG/add-playlist.png" alt="">Add
+                            playlist</a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <!-- general -->
+            <!-- <div>
+                <h2 class="text-sm text-pink-400 mb-2">General</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>⚙️</span> Setting</a></li>
+
+                </ul>
+            </div> -->
+        </aside>
+
+        <!-- main content -->
+        <main class="flex-1 p-4 md:p-6">
+            <nav class="flex items-center justify-between gap-4 mb-6 sticky top-0 bg-transparent z-10">
+                <div class="relative flex-1">
+                    <a id="search-icon" class="absolute inset-y-0 left-3 flex items-center" href="#"><img
+                            src="./IMG/search.png" class="w-5 opacity-80" alt="search icon"></a>
+                    <input id="search-input" class="w-full max-w-md bg-[#656565] px-10 py-2 rounded-lg text-gray-200"
+                        type="text" placeholder="Search For Musics, Artists, Albums">
+                </div>
+
+                <!-- <div class="hidden md:block">
+                    <ul class="flex">
+                        <li><a class="px-5 py-2 text-white" href="#">About</a></li>
+                        <li><a class="px-5 py-2 text-white" href="#">Contact</a></li>
+                        <li><a class="px-5 py-2 text-white" href="#">Premium</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="hidden md:flex gap-4 auth-area">
+                    <a href="./Login.html"
+                        class="bg-black hover:bg-pink-600 hover:text-black px-5 py-2 rounded-full text-pink-400 font-bold min-w-[120px] text-center">Login</a>
+                    <a href="./SignUp.html"
+                        class="border border-white text-black bg-pink-500 hover:bg-black hover:text-pink-400 px-5 py-2 rounded-full font-bold min-w-[120px] text-center">Sign
+                        Up</a>
+                </div>
+            </nav>
+
+            <div class="max-w-5xl mx-auto space-y-10">
+                <!-- Music genres -->
+                <section class="px-4">
+                    <h2 class="text-2xl font-bold">Music <span class="text-pink-400">Genres</span></h2>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a class="w-32 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto"
+                                src="./IMG/rap.png" alt="Rap"></a>
+                        <a class="w-32 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto"
+                                src="./IMG/pop.png" alt="Pop"></a>
+                        <a class="w-32 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto"
+                                src="./IMG/rock.png" alt="Rock"></a>
+                        <a class="w-32 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto"
+                                src="./IMG/classic.png" alt="classic"></a>
+                        <!-- <div class="flex items-center gap-2">
+                            <img class="w-14 h-auto" src="./IMG/Group 21.png" alt="add more">
+                            <a class="text-white" href="#">View All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- New Release Songs -->
+                <section class="px-4">
+                    <h2 class="text-2xl font-bold">New Release <span class="text-pink-400">Songs</span></h2>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a class="w-28 md:w-32" href="./Music-Eminem.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Group 24-1.png" alt="Time"></a>
+                        <a class="w-28 md:w-32" href="./Music-Eminem.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Group 26-1.png" alt="112"></a>
+                        <a class="w-28 md:w-32" href="./Music-Eminem.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Group 28-1.png" alt="We don't care"></a>
+                        <a class="w-28 md:w-32" href="./Music-Eminem.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Group 30-1.png" alt="Who I am"></a>
+                        <a class="w-28 md:w-32" href="./Music-Eminem.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Group 32-1.png" alt="Baixo"></a>
+                        <!-- <div class="flex items-center gap-2">
+                            <img class="w-14 h-auto" src="./IMG/Group 21.png" alt="add more">
+                            <a class="text-white" href="#">View All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- Popular Artists -->
+                <section class="px-4">
+                    <h2 class="text-2xl font-bold">Popular <span class="text-pink-400">Artists</span></h2>
+                    <div class="flex flex-wrap gap-6 mt-6">
+                        <div class="flex flex-col gap-4 items-center">
+                            <img class="w-28 h-28 object-cover rounded" src="./IMG/Eminiem.png" alt="Eminiem">
+                            <a class="text-white" href="./EminemPageResponsive.html">Eminiem</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-center">
+                            <img class="w-28 h-28 object-cover rounded" src="./IMG/Imagine-Dragons.png"
+                                alt="Imagine Dragons">
+                            <a class="text-white" href="./EminemPageResponsive.html">Imagine Dragons</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-center">
+                            <img class="w-28 h-28 object-cover rounded" src="./IMG/Adele.png" alt="Adele">
+                            <a class="text-white" href="./EminemPageResponsive.html">Adele</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-center">
+                            <img class="w-28 h-28 object-cover rounded" src="./IMG/Lana.png" alt="Lana Del Ray">
+                            <a class="text-white" href="./EminemPageResponsive.html">Lana Del Ray</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-center">
+                            <img class="w-28 h-28 object-cover rounded" src="./IMG/Harry.png" alt="Harry Styles">
+                            <a class="text-white" href="./EminemPageResponsive.html">Harry Styles</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-center">
+                            <img class="w-28 h-28 object-cover rounded" src="./IMG/Billie.png" alt="Billie Eilish">
+                            <a class="text-white" href="./EminemPageResponsive.html">Billie Eilish</a>
+                        </div>
+                        <!-- <div class="flex items-center gap-2">
+                            <img class="w-14 h-auto" src="./IMG/Group 21.png" alt="add more">
+                            <a class="text-white" href="#">View All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- Music Video -->
+                <section class="px-4">
+                    <h2 class="text-2xl font-bold">Music <span class="text-pink-400">Video</span></h2>
+                    <div class="flex flex-col items-center flex-wrap gap-4 mt-6 md:flex-row">
+                        <a class="w-3/4 md:w-48" href="https://www.youtube.com/watch?v=XrsbfrFPATs..."><img
+                                class="w-full h-auto rounded" src="./IMG/Gossip.png" alt="Gossip"></a>
+                        <a class="w-3/4 md:w-48" href="https://www.youtube.com/watch?v=JGwWNGJdvx8..."><img
+                                class="w-full h-auto rounded" src="./IMG/ShapeOfYou.png" alt="Shape of you"></a>
+                        <a class="w-3/4 md:w-48" href="https://www.youtube.com/watch?v=hLQl3WQQoQ0..."><img
+                                class="w-full h-auto rounded" src="./IMG/SomeLikeYOu.png" alt="Someone like you"></a>
+                        <!-- <div class="flex items-center gap-2">
+                            <img class="w-14 h-auto" src="./IMG/Group 21.png" alt="add more">
+                            <a class="text-white" href="#">View All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- Mood Playlist -->
+                <section class="px-4">
+                    <h2 class="text-2xl font-bold">Mood <span class="text-pink-400">Playlists</span></h2>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a class="w-28 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/sad-song.png" alt="Sad songs"></a>
+                        <a class="w-28 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Chill-song.png" alt="Chill songs"></a>
+                        <a class="w-28 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Work-out.png" alt="Workout songs"></a>
+                        <a class="w-28 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/love-song.png" alt="Love songs"></a>
+                        <a class="w-28 md:w-32" href="./PlaylistResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Happy-song.png" alt="Happy songs"></a>
+                        <!-- <div class="flex items-center gap-2">
+                            <img class="w-14 h-auto" src="./IMG/Group 21.png" alt="add more">
+                            <a class="text-white" href="#">View All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- New Albums -->
+                <section class="px-4">
+                    <h2 class="text-2xl font-bold">New <span class="text-pink-400">Albums</span></h2>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a class="w-28 md:w-32" href="./AlbumPageResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Heaven.png" alt="I Got Heaven"></a>
+                        <a class="w-28 md:w-32" href="./AlbumPageResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/Savior.png" alt="Saviors"></a>
+                        <a class="w-28 md:w-32" href="./AlbumPageResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/LossOfLife.png" alt="Loss of Life"></a>
+                        <a class="w-28 md:w-32" href="./AlbumPageResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/AllQuiet.png" alt="All Quiet"></a>
+                        <a class="w-28 md:w-32" href="./AlbumPageResponsive.html"><img class="w-full h-auto rounded"
+                                src="./IMG/LittelRope.png" alt="Litte Rope"></a>
+                        <!-- <div class="flex items-center gap-2">
+                            <img class="w-14 h-auto" src="./IMG/Group 21.png" alt="add more">
+                            <a class="text-white" href="#">View All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- Join our platform (responsive) -->
+                <section class="px-4">
+                    <div
+                        class="bg-black rounded-md p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div class="text-white max-w-xl">
+                            <h3 class="text-2xl font-bold mb-2">Join Our Platform</h3>
+                            <p class="text-sm">You can be one of the <span class="text-pink-400">members</span> of our
+                                platform.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a class="px-4 py-2 bg-pink-500 rounded text-black font-bold" href="./SignUp.html">Sign
+                                Up</a>
+                            <a class="px-4 py-2 bg-black rounded text-pink-400 border border-white" href="#">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="px-4">
+                    <div class="max-w-5xl mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4">About</h2>
+                            <p class="text-sm">Melodies is a website that has been created for over <span
+                                    class="text-pink-400">5 years</span> now and it is one of the most famous music
+                                player websites in the world. In this website you can listen and download songs for
+                                free. Also of you want no limitation you can buy our <span class="text-blue-400">premium
+                                    pass</span>.</p>
+                        </div>
+
+                        <div class="flex justify-around md:flex-row justify-between gap-6">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold">Melody</h3>
+                                <hr class="border-t border-gray-600">
+                                <a href="#" class="hover:underline">Songs</a>
+                                <a href="#" class="hover:underline">Radio</a>
+                                <a href="#" class="hover:underline">Podcast</a>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold">Access</h3>
+                                <hr class="border-t border-gray-600">
+                                <a href="#" class="hover:underline">Explore</a>
+                                <a href="#" class="hover:underline">Artists</a>
+                                <a href="#" class="hover:underline">Playlists</a>
+                                <a href="#" class="hover:underline">Albums</a>
+                                <a href="#" class="hover:underline">Trending</a>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold">Contact</h3>
+                                <hr class="border-t border-gray-600">
+                                <a href="#" class="hover:underline">About</a>
+                                <a href="#" class="hover:underline">Policy</a>
+                                <a href="#" class="hover:underline">Social Media</a>
+                                <a href="#" class="hover:underline">Support</a>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-start md:items-end">
+                            <h2
+                                class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                                Melodies</h2>
+                            <div class="flex gap-3 mt-4">
+                                <a href="https://www.facebook.com/?locale=vi_VN"><img src="./IMG/facebook.png"
+                                        alt="facebook" class="w-6 h-6"></a>
+                                <a href="https://x.com/"><img src="./IMG/twitter.png" alt="twitter" class="w-6 h-6"></a>
+                                <a href="https://www.instagram.com/"><img src="./IMG/instagram.png" alt="instagram"
+                                        class="w-6 h-6"></a>
+                                <a href="#"><img src="./IMG/call.png" alt="call" class="w-6 h-6"></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // toggle sidebar on mobile
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        toggleBtn?.addEventListener('click', () => {
+            if (!sidebar) return;
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('flex');
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

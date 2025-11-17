@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+</head>
+
+<body class="w-[430px] h-[932px] mx-auto">
+    <div class="w-[430px] h-[932px] bg-[url(./IMG/background.jpg)]">
+        <div class="bg-linear-to-br from-[#412c3a] to-[#0E1920] h-[932px] opacity-80">
+            <div class="flex flex-col justify-around h-[932px] bg-[#412c3a]">
+                <!-- Logo -->
+                <div class="self-center flex flex-col gap-4">
+                    <img src="./IMG/MelodyLogo.png" alt="Melody Logo">
+                    <img src="./IMG/Melodies.png" alt="">
+                </div>
+                <!-- Login -->
+                <form id="signupForm" class="flex flex-col gap-4 mb-30">
+                    <a class="ml-10" href="./Login.html"><img src="./IMG/arrow-back.png" alt="back icon"></a>
+                    <h1 class="text-white text-2xl self-center">Sign Up To Continue</h1>
+
+                    <input id="nameSignUp"
+                        class="bg-[#612c4f] text-white w-[350px] h-[42px] rounded-[20px] pl-4 mx-auto" type="text"
+                        placeholder="Name">
+                    <input id="emailSignUp"
+                        class="bg-[#612c4f] text-white w-[350px] h-[42px] rounded-[20px] pl-4 mx-auto" type="email"
+                        placeholder="E-mail" required>
+                    <input id="passSignUp"
+                        class="bg-[#612c4f] text-white w-[350px] h-[42px] rounded-[20px] pl-4 mx-auto" type="password"
+                        placeholder="Password" required>
+                    <input id="phoneSignUp"
+                        class="bg-[#612c4f] text-white w-[350px] h-[42px] rounded-[20px] pl-4 mx-auto" type="tel"
+                        placeholder="Phone Number">
+
+                    <div class="flex justify-end">
+                        <button type="submit"
+                            class="text-white bg-pink-800 rounded-[20px] px-8 py-1 mr-10 opacity-100 cursor-pointer">Create
+                            an
+                            account</button>
+                    </div>
+
+                    <p class="self-center text-md">Already have account? <a href="./Login.html"
+                            class="text-blue-400">Login</a></p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

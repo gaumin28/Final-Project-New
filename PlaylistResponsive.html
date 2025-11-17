@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Your Playlist</title>
+</head>
+
+<body class="min-h-screen bg-[#412c3a] text-white">
+    <div class="flex flex-col max-w-full">
+        <div class="w-full max-w-[430px] md:max-w-4xl mx-auto px-4 md:px-6 py-6">
+
+
+            <!-- Top bar  -->
+            <nav class="flex items-center justify-between pt-2 pb-4">
+                <div class="flex items-center gap-3">
+                    <!-- <a href="#"><img src="./IMG/blue-search.png" alt="search" class="w-6 h-6"></a> -->
+                    <h1
+                        class="text-lg md:text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                        Melodies
+                    </h1>
+                </div>
+                <div class="flex gap-2 auth-area">
+                    <a class="px-3 py-1 bg-black rounded-full text-pink-400 font-bold hidden sm:inline"
+                        href="./Login.html">Login</a>
+                    <a class="px-3 py-1 bg-pink-500 rounded-full text-black font-bold hidden sm:inline"
+                        href="./SignUp.html">Sign
+                        Up</a>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="flex-1 p-4 md:p-6">
+                <div class="max-w-5xl mx-auto">
+
+                    <!-- Banner -->
+                    <section class="bg-gradient-to-r from-blue-600 to-blue-400 opacity-80 rounded-md p-4 md:p-6">
+                        <!-- <nav class="flex items-start justify-between">
+                            <a class="mt-2" href="#"><img src="./IMG/arrow-back.png" alt="back" class="w-6 h-6"></a>
+                            <div class="hidden md:flex gap-6 items-center">
+                                <ul class="flex gap-4 text-white">
+                                    <li><a href="#">Share</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Premium</a></li>
+                                </ul>
+                                <a href="#"><img src="./IMG/profile.png" alt="profile" class="w-8 h-8 rounded-full"></a>
+                            </div>
+                        </nav> -->
+
+                        <div class="flex flex-col md:flex-row items-center md:items-stretch gap-6 mt-6">
+                            <div class="flex-shrink-0">
+                                <img src="./IMG/LoveSong.png" alt="trending music"
+                                    class="w-40 md:w-64 object-cover rounded" />
+                            </div>
+
+                            <div class="flex-1 text-white">
+                                <h2 class="text-2xl font-bold">My <span class="text-pink-500">Playlist</span></h2>
+                                <p class="text-sm">tate mcree, nightmares, the neighberhood, doja cat and ...</p>
+                                <div class="mt-3 font-bold">20 songs <span class="text-pink-400">•</span> 1h 36m</div>
+                            </div>
+
+                            <div class="flex-shrink-0 flex items-center gap-3">
+                                <button class="text-pink-500 font-semibold">Play all</button>
+                                <img src="./IMG/pink-play.png" alt="play button" class="w-12 h-12" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Top trending header -->
+                    <section class="mt-6">
+                        <div class="flex items-center justify-between text-white mb-2 hidden md:flex">
+                            <div class="md:w-1/2">Song</div>
+                            <div class="md:w-1/6">Release Date</div>
+                            <div class="md:w-1/3">Album</div>
+                            <div class="md:w-auto pr-4">Time</div>
+                        </div>
+
+                        <!-- song list -->
+                        <div class="space-y-3">
+                            <!-- #1 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#1</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/Softcore.png" alt="Softcore">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Softcore</h3>
+                                        <p class="text-xs font-thin opacity-70">The neighberhood</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">Nov 4, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Hard to Imagine the Neighbourhood Ever
+                                    Changing</div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">3:26</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- #2 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#2</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/Skyfall.png" alt="Skyfall">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Skyfall Beats</h3>
+                                        <p class="text-xs font-thin opacity-70">Nightmare</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">Oct 26, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Nightmare</div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">2:45</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- #3 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#3</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/Greedy.png" alt="Greedy">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Greedy</h3>
+                                        <p class="text-xs font-thin opacity-70">tate mcrae</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">Dec 30, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Greedy</div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">2:11</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- #4 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#4</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/Loving-me.png" alt="Lovin">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Lovin On me</h3>
+                                        <p class="text-xs font-thin opacity-70">jack harlow</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">Dec 30, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Lovin On me</div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">2:18</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- #5 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#5</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/pain-on-town.png" alt="paint the town red">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Paint the town red</h3>
+                                        <p class="text-xs font-thin opacity-70">Doja Cat</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">Dec 29, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Paint The Town Red</div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">3:51</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- #6 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#6</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/dancing.png" alt="dancing on night">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Dancin On Night</h3>
+                                        <p class="text-xs font-thin opacity-70">Dualipa</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">May 27, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Dance The Night(From Barbie Movie)
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">2:56</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- #7 -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
+                                <div class="flex items-center gap-3 md:w-1/2">
+                                    <span class="text-pink-400 font-bold">#7</span>
+                                    <div class="relative"><img
+                                            class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                            src="./IMG/water.png" alt="water">
+                                        <img class="pause-overlay absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Water</h3>
+                                        <p class="text-xs font-thin opacity-70">Tyla</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 md:mt-0 md:w-1/6 text-gray-300">Dec 10, 2023</div>
+                                <div class="mt-2 md:mt-0 md:w-1/3 text-gray-300">Water</div>
+                                <div class="mt-2 md:mt-0 md:w-auto">
+                                    <div class="flex gap-2 items-center">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">3:20</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- view all -->
+                            <!-- <div class="flex gap-4 justify-center bg-black rounded-md items-center mt-2 p-3">
+                                <a class="text-white font-bold flex items-center gap-2" href="#">
+                                    <img class="inline-block w-5 h-5" src="./IMG/plus.png" alt="plus">
+                                    View All
+                                </a>
+                            </div> -->
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="mt-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-4">About</h2>
+                                <p class="text-sm">Melodies is a website that has been created for over <span
+                                        class="text-pink-400">5 years</span> now and it is one of the most famous music
+                                    player websites in the world. In this website you can listen and download songs for
+                                    free. Also of you want no limitation you can buy our <span
+                                        class="text-blue-400">premium
+                                        pass</span>.</p>
+                            </div>
+
+                            <div class="flex justify-around md:flex-row justify-between gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-xl font-bold">Melody</h3>
+                                    <hr class="border-t border-gray-600">
+                                    <a href="#" class="hover:underline">Songs</a>
+                                    <a href="#" class="hover:underline">Radio</a>
+                                    <a href="#" class="hover:underline">Podcast</a>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-xl font-bold">Access</h3>
+                                    <hr class="border-t border-gray-600">
+                                    <a href="#" class="hover:underline">Explore</a>
+                                    <a href="#" class="hover:underline">Artists</a>
+                                    <a href="#" class="hover:underline">Playlists</a>
+                                    <a href="#" class="hover:underline">Albums</a>
+                                    <a href="#" class="hover:underline">Trending</a>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-xl font-bold">Contact</h3>
+                                    <hr class="border-t border-gray-600">
+                                    <a href="#" class="hover:underline">About</a>
+                                    <a href="#" class="hover:underline">Policy</a>
+                                    <a href="#" class="hover:underline">Social Media</a>
+                                    <a href="#" class="hover:underline">Support</a>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col justify-between items-start md:items-end">
+                                <h2
+                                    class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                                    Melodies</h2>
+                                <div class="flex gap-3 mt-4">
+                                    <a href="https://www.facebook.com/?locale=vi_VN"><img src="./IMG/facebook.png"
+                                            alt="facebook" class="w-6 h-6"></a>
+                                    <a href="https://x.com/"><img src="./IMG/twitter.png" alt="twitter"
+                                            class="w-6 h-6"></a>
+                                    <a href="https://www.instagram.com/"><img src="./IMG/instagram.png" alt="instagram"
+                                            class="w-6 h-6"></a>
+                                    <a href="#"><img src="./IMG/call.png" alt="call" class="w-6 h-6"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Most Played Songs</title>
+</head>
+
+<body class="min-h-screen bg-[#412c3a] text-white">
+    <div class="flex flex-col md:flex-row max-w-full">
+
+        <!-- Mobile top bar -->
+        <header class="flex items-center justify-between p-4 md:hidden bg-[#0E1920]">
+            <div class="flex items-center gap-3">
+                <button id="toggleSidebar" aria-label="Toggle menu"
+                    class="p-2 rounded-md bg-pink-500 text-black font-bold">☰</button>
+                <h1
+                    class="text-lg font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                    Melodies
+                </h1>
+            </div>
+            <div class="flex gap-2 auth-area">
+                <a class="px-3 py-1 bg-black rounded-full text-pink-400 font-bold" href="./Login.html">Login</a>
+                <a class="px-3 py-1 bg-pink-500 rounded-full text-black font-bold" href="./SignUp.html">Sign Up</a>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside id="sidebar"
+            class="side-bar bg-[#0E1920] text-white w-full md:w-64 p-6 flex flex-col space-y-6 hidden md:flex md:sticky md:top-0 md:h-screen md:overflow-y-auto shrink-0">
+            <h1
+                class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                Melodies</h1>
+
+            <!-- menu -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Menu</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./index.html"><span>🏠</span>
+                            Home</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./DiscoverResponsive.html"><span>🔍</span>
+                            Discover</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./AlbumsResponsive.html"><span>📀</span>
+                            Albums</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./ArtistResponsive.html"><span>🎤</span>
+                            Artists</a></li>
+                </ul>
+            </div>
+
+            <!-- Library -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Library</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./RecentlyResponsive.html"><span>🕒</span> Recently Added</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔥</span> Most played</a></li>
+                </ul>
+            </div>
+
+            <!-- Playlist and favorite -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Playlist and favorite</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./FavouriteResponsive.html"><span>❤️</span> Your favorites</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./PlaylistResponsive.html"><span>📃</span> Your playlist</a></li>
+                    <!-- <li class="hover:bg-pink-500 hover:text-white rounded-[10px] pl-2 text-blue-300"><a href="#"><img
+                                class="w-4 inline-block mr-1" src="./IMG/add-playlist.png" alt="">Add playlist</a></li> -->
+                </ul>
+            </div>
+
+            <!-- general -->
+            <!-- <div>
+                <h2 class="text-sm text-pink-400 mb-2">General</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>⚙️</span> Setting</a></li>
+                </ul>
+            </div> -->
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-4 md:p-6">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Banner -->
+                <section class="bg-gradient-to-r from-blue-600 to-blue-400 opacity-80 rounded-md p-4 md:p-6">
+                    <!-- <nav class="flex items-start justify-between"> -->
+                    <!-- <a class="mt-2" href="#"><img src="./IMG/arrow-back.png" alt="back" class="w-6 h-6"></a> -->
+                    <!-- <div class="hidden md:flex gap-6 items-center">
+                            <ul class="flex gap-4 text-white">
+                                <li><a href="#">Share</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Premium</a></li>
+                            </ul>
+                            <a href="#"><img src="./IMG/profile.png" alt="profile" class="w-8 h-8 rounded-full"></a>
+                        </div> -->
+                    <!-- </nav> -->
+
+                    <div class="flex flex-col md:flex-row items-center md:items-stretch gap-6 mt-6">
+                        <div class="flex-shrink-0">
+                            <img src="./IMG/trending-music-logo.png" alt="trending music"
+                                class="w-40 md:w-64 object-cover rounded" />
+                        </div>
+
+                        <div class="flex-1 text-white">
+                            <h2 class="text-2xl font-bold">Most Played <span class="text-pink-500">Songs</span></h2>
+                            <p class="text-sm">tate mcree, nightmares, the neighberhood, doja cat and ...</p>
+                            <div class="mt-3 font-bold">20 songs <span class="text-pink-400">•</span> 1h 36m</div>
+                        </div>
+
+                        <div class="flex-shrink-0 flex items-center gap-3">
+                            <button class="text-pink-500 font-semibold">Play all</button>
+                            <img src="./IMG/pink-play.png" alt="play button" class="w-12 h-12" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Top trending header -->
+                <section class="mt-8">
+                    <h2 class="text-2xl text-white font-bold mb-4">Popular</h2>
+
+                    <!--  -->
+                    <div class="hidden md:grid md:grid-cols-12 gap-4 text-white mb-2">
+                        <div class="md:col-span-5">Song</div>
+                        <div class="md:col-span-3">Release Date</div>
+                        <div class="md:col-span-2">Played</div>
+                        <div class="md:col-span-2 text-right pr-4">Time</div>
+                    </div>
+
+                    <!-- list -->
+                    <div class="space-y-3">
+                        <!-- -->
+                        <div class="bg-[#1E1E1E] rounded-md p-3">
+                            <div class="flex flex-col md:grid md:grid-cols-12 md:items-center gap-3">
+                                <div class="md:col-span-5 flex items-center gap-3">
+                                    <span class="font-bold text-pink-400">1</span>
+                                    <a href="#"><img src="./IMG/WithoutMe.png" alt="Without Me"
+                                            class="w-12 h-12 rounded object-cover"></a>
+                                    <div>
+                                        <h3 class="font-bold">Without Me</h3>
+                                        <p class="text-xs font-thin opacity-70">Eminem</p>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 text-gray-300">May 15, 2002</div>
+                                <div class="md:col-span-2 text-gray-300">21,215,618</div>
+                                <div class="md:col-span-2 text-right">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">4:50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- #2 -->
+                        <div class="bg-[#1E1E1E] rounded-md p-3">
+                            <div class="flex flex-col md:grid md:grid-cols-12 md:items-center gap-3">
+                                <div class="md:col-span-5 flex items-center gap-3">
+                                    <span class="font-bold text-pink-400">2</span>
+                                    <a href="#"><img src="./IMG/MockingBird.png" alt="Mockingbird"
+                                            class="w-12 h-12 rounded object-cover"></a>
+                                    <div>
+                                        <h3 class="font-bold">Mockingbird</h3>
+                                        <p class="text-xs font-thin opacity-70">Eminem</p>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 text-gray-300">Apr 25, 2005</div>
+                                <div class="md:col-span-2 text-gray-300">19,856,112</div>
+                                <div class="md:col-span-2 text-right">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">4:10</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- #3 -->
+                        <div class="bg-[#1E1E1E] rounded-md p-3">
+                            <div class="flex flex-col md:grid md:grid-cols-12 md:items-center gap-3">
+                                <div class="md:col-span-5 flex items-center gap-3">
+                                    <span class="font-bold text-pink-400">3</span>
+                                    <a href="#"><img src="./IMG/TheRealSlim.png" alt="The Real Slim"
+                                            class="w-12 h-12 rounded object-cover"></a>
+                                    <div>
+                                        <h3 class="font-bold">The Real Slim Sha..</h3>
+                                        <p class="text-xs font-thin opacity-70">Eminem</p>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 text-gray-300">Nov 30, 2023</div>
+                                <div class="md:col-span-2 text-gray-300">16,654,223</div>
+                                <div class="md:col-span-2 text-right">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">4:44</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- #4 -->
+                        <div class="bg-[#1E1E1E] rounded-md p-3">
+                            <div class="flex flex-col md:grid md:grid-cols-12 md:items-center gap-3">
+                                <div class="md:col-span-5 flex items-center gap-3">
+                                    <span class="font-bold text-pink-400">3</span>
+                                    <a href="#"><img src="./IMG/TheRealSlim.png" alt="The Real Slim"
+                                            class="w-12 h-12 rounded object-cover"></a>
+                                    <div>
+                                        <h3 class="font-bold">The Real Slim Sha..</h3>
+                                        <p class="text-xs font-thin opacity-70">Eminem</p>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 text-gray-300">Nov 30, 2023</div>
+                                <div class="md:col-span-2 text-gray-300">16,654,223</div>
+                                <div class="md:col-span-2 text-right">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">4:44</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- #5 -->
+                        <div class="bg-[#1E1E1E] rounded-md p-3">
+                            <div class="flex flex-col md:grid md:grid-cols-12 md:items-center gap-3">
+                                <div class="md:col-span-5 flex items-center gap-3">
+                                    <span class="font-bold text-pink-400">3</span>
+                                    <a href="#"><img src="./IMG/TheRealSlim.png" alt="The Real Slim"
+                                            class="w-12 h-12 rounded object-cover"></a>
+                                    <div>
+                                        <h3 class="font-bold">The Real Slim Sha..</h3>
+                                        <p class="text-xs font-thin opacity-70">Eminem</p>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 text-gray-300">Nov 30, 2023</div>
+                                <div class="md:col-span-2 text-gray-300">16,654,223</div>
+                                <div class="md:col-span-2 text-right">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">4:44</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- #6 -->
+                        <div class="bg-[#1E1E1E] rounded-md p-3">
+                            <div class="flex flex-col md:grid md:grid-cols-12 md:items-center gap-3">
+                                <div class="md:col-span-5 flex items-center gap-3">
+                                    <span class="font-bold text-pink-400">3</span>
+                                    <a href="#"><img src="./IMG/TheRealSlim.png" alt="The Real Slim"
+                                            class="w-12 h-12 rounded object-cover"></a>
+                                    <div>
+                                        <h3 class="font-bold">The Real Slim Sha..</h3>
+                                        <p class="text-xs font-thin opacity-70">Eminem</p>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 text-gray-300">Nov 30, 2023</div>
+                                <div class="md:col-span-2 text-gray-300">16,654,223</div>
+                                <div class="md:col-span-2 text-right">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <img src="./IMG/heart.png" alt="heart" class="w-5 h-5">
+                                        <span class="text-white">4:44</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- more rows kept as original content but responsive -->
+                        <!-- show all -->
+                        <!-- <div class="flex justify-center">
+                            <a class="bg-pink-500 text-white font-bold px-4 py-2 rounded-md" href="#">Show All</a>
+                        </div> -->
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="mt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4">About</h2>
+                            <p class="text-sm">Melodies is a website that has been created for over <span
+                                    class="text-pink-400">5 years</span> now and it is one of the most famous music
+                                player websites in the world. In this website you can listen and download songs for
+                                free. Also of you want no limitation you can buy our <span class="text-blue-400">premium
+                                    pass</span>.</p>
+                        </div>
+
+                        <div class="flex justify-around md:flex-row justify-between gap-6">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold">Melody</h3>
+                                <hr class="border-t border-gray-600">
+                                <a href="#" class="hover:underline">Songs</a>
+                                <a href="#" class="hover:underline">Radio</a>
+                                <a href="#" class="hover:underline">Podcast</a>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold">Access</h3>
+                                <hr class="border-t border-gray-600">
+                                <a href="#" class="hover:underline">Explore</a>
+                                <a href="#" class="hover:underline">Artists</a>
+                                <a href="#" class="hover:underline">Playlists</a>
+                                <a href="#" class="hover:underline">Albums</a>
+                                <a href="#" class="hover:underline">Trending</a>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold">Contact</h3>
+                                <hr class="border-t border-gray-600">
+                                <a href="#" class="hover:underline">About</a>
+                                <a href="#" class="hover:underline">Policy</a>
+                                <a href="#" class="hover:underline">Social Media</a>
+                                <a href="#" class="hover:underline">Support</a>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-start md:items-end">
+                            <h2
+                                class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                                Melodies</h2>
+                            <div class="flex gap-3 mt-4">
+                                <a href="https://www.facebook.com/?locale=vi_VN"><img src="./IMG/facebook.png"
+                                        alt="facebook" class="w-6 h-6"></a>
+                                <a href="https://x.com/"><img src="./IMG/twitter.png" alt="twitter" class="w-6 h-6"></a>
+                                <a href="https://www.instagram.com/"><img src="./IMG/instagram.png" alt="instagram"
+                                        class="w-6 h-6"></a>
+                                <a href="#"><img src="./IMG/call.png" alt="call" class="w-6 h-6"></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // toggle sidebar on mobile
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        toggleBtn?.addEventListener('click', () => {
+            if (!sidebar) return;
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('flex');
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

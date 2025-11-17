@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body class="w-[430px] h-[932px] mx-auto">
+    <div class="w-[430px] h-[932px] bg-[url(./IMG/background.jpg)]">
+        <div class="bg-linear-to-br from-[#412c3a] to-[#0E1920] h-[932px] opacity-80">
+            <div class="flex flex-col justify-around h-[737px] bg-[#412c3a] rounded-b-4xl">
+                <!-- Logo -->
+                <div class="self-center flex flex-col gap-4">
+                    <img src="./IMG/MelodyLogo.png" alt="Melody Logo">
+                    <img src="./IMG/Melodies.png" alt="">
+                </div>
+                <!-- Login -->
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-white self-center">Login To Continue</h1>
+                    <form class="flex flex-col gap-4" id="loginForm">
+                        <input class="bg-[#612c4f] text-white w-[350px] h-[42px] rounded-[20px] pl-4 mx-auto"
+                            type="email" placeholder="E-mail" id="emailLogin">
+                        <input class="bg-[#612c4f] text-white w-[350px] h-[42px] rounded-[20px] pl-4 mx-auto"
+                            type="password" placeholder="Password" id="passLogin">
+                        <div class="flex justify-around">
+                            <a class="text-white" href="./ForgotPassword.html">Forgot password <span
+                                    class="text-2xl">></span></a>
+                            <button class="text-white bg-pink-500 rounded-md px-8 py-1 cursor-pointer"
+                                type="submit">Login</button>
+                            <!-- <a class="text-white bg-pink-500 rounded-md px-8 py-1" href="#">Login</a> -->
+                        </div>
+                    </form>
+
+                </div>
+                <!-- Login Method -->
+                <div class="flex justify-around">
+                    <a
+                        href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmyaccount.google.com%2Fintro%2Fsigning-in-to-google&dsh=S-603327768%3A1762845791679965&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=en-US&ifkv=ARESoU3mX1z46VVUL_70r4szPVneDiFQJHQJ9qRB7HZR_knVcGwiM9MtuGt6GZk2F94Rz92GNKAYAQ&service=accountsettings">
+                        <div
+                            class="flex justify-center gap-4 border border-white w-[190px] h-[42px] rounded-2xl px-4 py-4">
+                            <img class="size-6 self-center" src="./IMG/google.png" alt="Google Logo">
+                            <p class="text-white self-center">Google Login</p>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/?locale=vi_VN">
+                        <div
+                            class="flex justify-center gap-4 border border-white w-[190px] h-[42px] rounded-2xl px-4 py-4">
+                            <img class="size-6 self-center" src="./IMG/logos_facebook.png" alt="Facebook Logo">
+                            <p class="text-white self-center">Facebook Login</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- sign up -->
+            <div class="flex justify-around items-center">
+                <div class="text-white pt-20">
+                    <h2>Don't Have An Acount</h2>
+                    <p>Sign Up Here</p>
+                </div>
+                <div class="mt-20">
+                    <a class="text-white bg-blue-500 rounded-md px-8 py-1" href="./SignUp.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

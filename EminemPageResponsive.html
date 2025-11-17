@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Eminem Page</title>
+</head>
+
+<body class="min-h-screen bg-[#412c3a] text-white">
+    <div class="flex flex-col md:flex-row max-w-full">
+        <!-- Mobile top bar with hamburger -->
+        <header class="flex items-center justify-between p-4 md:hidden bg-[#0E1920]">
+            <div class="flex items-center gap-3">
+                <button id="toggleSidebar" aria-label="Toggle menu"
+                    class="p-2 rounded-md bg-pink-500 text-black font-bold">☰</button>
+                <h1
+                    class="text-lg font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                    Melodies
+                </h1>
+            </div>
+            <div class="flex gap-2 auth-area">
+                <a class="px-3 py-1 bg-black rounded-full text-pink-400 font-bold" href="./Login.html">Login</a>
+                <a class="px-3 py-1 bg-pink-500 rounded-full text-black font-bold" href="./SignUp.html">Sign Up</a>
+            </div>
+        </header>
+
+        <!-- sidebar -->
+        <aside id="sidebar"
+            class="side-bar bg-[#0E1920] text-white w-full md:w-64 p-6 flex flex-col space-y-6 hidden md:flex md:sticky md:top-0 md:h-screen md:overflow-y-auto shrink-0">
+            <div class="md:block hidden">
+                <h1
+                    class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                    Melodies</h1>
+            </div>
+
+            <!-- menu -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Menu</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./index.html"><span>🏠</span> Home</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔍</span> Explore</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./AlbumsResponsive.html"><span>📀</span>
+                            Albums</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./ArtistResponsive.html"><span>🎤</span>
+                            Artists</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Library -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Library</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./RecentlyResponsive.html"><span>🕒</span> Recently Added</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./MostPlayedResponsive.html"><span>🔥</span> Most played</a></li>
+                </ul>
+            </div>
+
+            <!-- Playlist and favorite -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Playlist and favorite</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./FavouriteResponsive.html"><span>❤️</span> Your favorites</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./PlaylistResponsive.html"><span>📃</span> Your playlist</a></li>
+                </ul>
+            </div>
+
+            <!-- general -->
+            <!-- <div>
+                <h2 class="text-sm text-pink-400 mb-2">General</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>⚙️</span> Setting</a></li>
+                </ul>
+            </div> -->
+        </aside>
+
+        <!-- main content -->
+        <main class="flex-1 p-4 md:p-6 w-full bg-gradient-to-r from-[#0E1920] to-[#412c3a]">
+            <div class="w-full max-w-4xl mx-auto">
+
+                <div class="px-2 md:px-4">
+                    <!-- banner -->
+                    <div
+                        class="flex text-white justify-between shadow-[3px_12px_4px_rgba(0,0,0,0.3)] rounded-lg bg-[url(./IMG/Eminem-artist.png)] bg-no-repeat bg-cover w-full h-48 md:h-64 lg:h-80">
+                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold self-end pb-2 pl-4">Eminem</h1>
+                        <img class="size-6 md:size-7 box-content pt-3 pr-4" src="./IMG/check.png" alt="check icon">
+                    </div>
+
+                    <!-- Popular Song -->
+
+                    <div class="w-full text-white mt-6 mx-auto">
+                        <div
+                            class="flex flex-row md:flex-row justify-between items-start mr-4 md:items-center mb-2 gap-2">
+                            <h2 class="text-xl md:text-2xl font-bold">Popular <span class="text-pink-400">Songs</span>
+                            </h2>
+                            <div class="flex gap-4 md:gap-8 text-sm md:text-base font-semibold">
+                                <span>Time</span>
+                                <span>More</span>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- #1 -->
+                            <div class="flex justify-between h-16 md:h-20 bg-[#1e1e1e] rounded-md mb-2 p-2">
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-sm md:text-base font-semibold">1</span>
+                                    <div class="relative"><img class="music-playing size-12 md:size-16 cursor-pointer"
+                                            src="./IMG/EminemShow-1.png" alt="Eminem">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <div class="flex flex-col justify-around">
+                                            <h3 class="text-sm md:text-base font-semibold">Without Me</h3>
+                                            <p class="text-xs md:text-sm font-light">Eminem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 md:gap-12 items-center mr-2">
+                                    <span class="text-xs md:text-sm">4:50</span>
+                                    <a href=""><img src="./IMG/pink-dots.png" alt="3 dots icon"></a>
+                                </div>
+                            </div>
+                            <!-- #2 -->
+                            <div class="flex justify-between h-16 md:h-20 bg-[#1e1e1e] rounded-md mb-2 p-2">
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-sm md:text-base font-semibold">2</span>
+                                    <div class="relative">
+                                        <img class="music-playing size-12 md:size-16 cursor-pointer"
+                                            src="./IMG/Encore.png" alt="Eminem">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <div class="flex flex-col justify-around">
+                                            <h3 class="text-sm md:text-base font-semibold">Mocking Bird</h3>
+                                            <p class="text-xs md:text-sm font-light">Eminem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 md:gap-12 items-center mr-2">
+                                    <span class="text-xs md:text-sm">4:10</span>
+                                    <a href=""><img src="./IMG/pink-dots.png" alt="3 dots icon"></a>
+                                </div>
+                            </div>
+                            <!-- #3 -->
+                            <div class="flex justify-between h-16 md:h-20 bg-[#1e1e1e] rounded-md mb-2 p-2">
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-sm md:text-base font-semibold">3</span>
+                                    <div class="relative">
+                                        <img class="music-playing md:size-16 cursor-pointer" src="./IMG/TheRealSlim.png"
+                                            alt="Eminem">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <div class="flex flex-col justify-around">
+                                            <h3 class="text-sm md:text-base font-semibold">The Real Slim Shady</h3>
+                                            <p class="text-xs md:text-sm font-light">Eminem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 md:gap-12 items-center mr-2">
+                                    <span class="text-xs md:text-sm">4:44</span>
+                                    <a href=""><img src="./IMG/pink-dots.png" alt="3 dots icon"></a>
+                                </div>
+                            </div>
+                            <!-- #4 -->
+                            <div class="flex justify-between h-16 md:h-20 bg-[#1e1e1e] rounded-md mb-2 p-2">
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-sm md:text-base font-semibold">4</span>
+                                    <div class="relative">
+                                        <img class="music-playing md:size-16 cursor-pointer"
+                                            src="./IMG/LoseYourself.png" alt="Eminem">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <div class="flex flex-col justify-around">
+                                            <h3 class="text-sm md:text-base font-semibold">Lose Yourself</h3>
+                                            <p class="text-xs md:text-sm font-light">Eminem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 md:gap-12 items-center mr-2">
+                                    <span class="text-xs md:text-sm">5:22</span>
+                                    <a href=""><img src="./IMG/pink-dots.png" alt="3 dots icon"></a>
+                                </div>
+                            </div>
+                            <!-- #5 -->
+                            <div class="flex justify-between h-16 md:h-20 bg-[#1e1e1e] rounded-md mb-2 p-2">
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-sm md:text-base font-semibold">5</span>
+                                    <div class="relative">
+                                        <img class="music-playing md:size-16 cursor-pointer" src="./IMG/Godzilla.png"
+                                            alt="Eminem">
+                                        <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                            src="./IMG/pause-icon.png" alt="pause icon" />
+                                    </div>
+                                    <div>
+                                        <div class="flex flex-col justify-around">
+                                            <h3 class="text-sm md:text-base font-semibold">Godzilla</h3>
+                                            <p class="text-xs md:text-sm font-light">Eminem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 md:gap-12 items-center mr-2">
+                                    <span class="text-xs md:text-sm">3:30</span>
+                                    <a href=""><img src="./IMG/pink-dots.png" alt="3 dots icon"></a>
+                                </div>
+                            </div>
+                            <!-- <div class="flex justify-center">
+                                <a class="font-semibold bg-pink-500 rounded-md px-6 py-1 text-sm md:text-base"
+                                    href="#">Show
+                                    ALL</a>
+                            </div>
+                        </div> -->
+                        </div>
+
+                        <!-- Artist Albums -->
+
+                        <div class="w-full mt-10 mx-auto">
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-white text-xl md:text-2xl font-bold">Artist <span
+                                        class="text-blue-400">Albums</span></h2>
+                                <!-- <a class="text-blue-400 text-sm md:text-base" href="#">View All <span
+                                    class="text-xl md:text-2xl">></span></a> -->
+                            </div>
+
+                            <!-- song list -->
+                            <div class="flex gap-2 md:gap-4 mt-6 overflow-x-auto">
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./AlbumPageResponsive.html">
+                                    <img src="./IMG/EminemShow-1.png" alt="Eminem show" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Eminem Show</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2002</p>
+                                        <img src="./IMG/play-symbol.png" alt="play symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./AlbumPageResponsive.html">
+                                    <img src="./IMG/Encore-new.png" alt="Encore" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Encore</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2004</p>
+                                        <img src="./IMG/play-symbol.png" alt="play symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./AlbumPageResponsive.html">
+                                    <img src="./IMG/EminemShow-1.png" alt="Eminem Show" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Recovery</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2004</p>
+                                        <img src="./IMG/play-symbol.png" alt="play symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./AlbumPageResponsive.html">
+                                    <img src="./IMG/EminemShow-1.png" alt="Eminem show" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Eminem Show</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2002</p>
+                                        <img src="./IMG/play-symbol.png" alt="play symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./AlbumPageResponsive.html">
+                                    <img src="./IMG/Encore-new.png" alt="Encore" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Encore</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2004</p>
+                                        <img src="./IMG/play-symbol.png" alt="play symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./AlbumPageResponsive.html">
+                                    <img src="./IMG/EminemShow-1.png" alt="Eminem Show" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Recovery</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2004</p>
+                                        <img src="./IMG/play-symbol.png" alt="play symbol" class="w-4">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Single Songs -->
+
+                        <div class="w-full mt-10 mx-auto">
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-white text-xl md:text-2xl font-bold">Single <span
+                                        class="text-pink-400">Songs</span>
+                                </h2>
+                                <!-- <a class="text-blue-400 text-sm md:text-base" href="#">View All <span
+                                    class="text-xl md:text-2xl">></span></a> -->
+                            </div>
+
+                            <!-- song list -->
+                            <div class="flex gap-2 md:gap-4 mt-6 overflow-x-auto">
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./Music-Eminem.html">
+                                    <img src="./IMG/laceit-new.png" alt="Lace It" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Lace It</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2023</p>
+                                        <img src="./IMG/music-icon.png" alt="music symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./Music-Eminem.html">
+                                    <img src="./IMG/Realesc-new.png" alt="Realesc" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Realesc</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2022</p>
+                                        <img src="./IMG/music-icon.png" alt="music symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./Music-Eminem.html">
+                                    <img src="./IMG/Killshot-new.png" alt="Killshot" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Killshot</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2018</p>
+                                        <img src="./IMG/music-icon.png" alt="music symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./Music-Eminem.html">
+                                    <img src="./IMG/laceit-new.png" alt="Lace It" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Lace It</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2023</p>
+                                        <img src="./IMG/music-icon.png" alt="music symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./Music-Eminem.html">
+                                    <img src="./IMG/Realesc-new.png" alt="Realesc" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Realesc</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2022</p>
+                                        <img src="./IMG/music-icon.png" alt="music symbol" class="w-4">
+                                    </div>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./Music-Eminem.html">
+                                    <img src="./IMG/Killshot-new.png" alt="Killshot" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Killshot</h3>
+                                    <div class="flex justify-between text-xs">
+                                        <p>2018</p>
+                                        <img src="./IMG/music-icon.png" alt="music symbol" class="w-4">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Artist Playlists -->
+                        <div class="w-full mt-10 mx-auto">
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-white text-xl md:text-2xl font-bold">Artist <span
+                                        class="text-pink-400">Playlists</span></h2>
+                                <!-- <a class="text-blue-400 text-sm md:text-base" href="#">View All <span
+                                    class="text-xl md:text-2xl">></span></a> -->
+                            </div>
+
+                            <!-- song list -->
+                            <div class="flex gap-2 md:gap-4 mt-6 overflow-x-auto">
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./PlaylistResponsive.html">
+                                    <img src="./IMG/FullCollection-1.png" alt="Full Collection" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Full Collection</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./PlaylistResponsive.html">
+                                    <img src="./IMG/BestOfEminem-1.png" alt="Best of Eminem" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Best Of Eminem</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./PlaylistResponsive.html">
+                                    <img src="./IMG/OldSong.png" alt="old songs" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Old Songs</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./PlaylistResponsive.html">
+                                    <img src="./IMG/FullCollection-1.png" alt="Full Collection" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Full Collection</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./PlaylistResponsive.html">
+                                    <img src="./IMG/BestOfEminem-1.png" alt="Best of Eminem" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Best Of Eminem</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 w-24 md:w-32"
+                                    href="./PlaylistResponsive.html">
+                                    <img src="./IMG/OldSong.png" alt="old songs" class="w-full rounded">
+                                    <h3 class="text-xs md:text-sm font-bold">Old Songs</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Another Artists -->
+                        <div class="w-full mt-10 mx-auto pb-8">
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-white text-xl md:text-2xl font-bold">Another <span
+                                        class="text-pink-400">Artists</span></h2>
+                                <!-- <a class="text-blue-400 text-sm md:text-base" href="#">View All <span
+                                        class="text-xl md:text-2xl">></span></a> -->
+                            </div>
+
+                            <!-- song list -->
+                            <div class="flex gap-2 md:gap-4 mt-6 overflow-x-auto pb-4">
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 items-center" href="#">
+                                    <img class="size-20 md:size-28 rounded-full" src="./IMG/50Cent.png" alt="50 Cent">
+                                    <h3 class="text-xs md:text-sm font-bold text-center">50 Cent</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 items-center" href="#">
+                                    <img class="size-20 md:size-28 rounded-full" src="./IMG/Adele-1.png" alt="Adele">
+                                    <h3 class="text-xs md:text-sm font-bold text-center">Adele</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 items-center" href="#">
+                                    <img class="size-20 md:size-28 rounded-full" src="./IMG/Lana-1.png"
+                                        alt="Lana Del Ray">
+                                    <h3 class="text-xs md:text-sm font-bold text-center">Lana Del Ray</h3>
+                                </a>
+                                <a class="flex flex-col gap-2 text-white flex-shrink-0 items-center" href="#">
+                                    <img class="size-20 md:size-28 rounded-full" src="./IMG/Billie-1.png"
+                                        alt="Billie Eilish">
+                                    <h3 class="text-xs md:text-sm font-bold text-center">Billie Eilish</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        toggleBtn?.addEventListener('click', () => {
+            if (!sidebar) return;
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('flex');
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Artist</title>
+</head>
+
+<body>
+
+    <body class="flex w-7/8 min-h-screen mx-auto">
+        <!-- sidebar -->
+        <div class="side-bar bg-[#0E1920] text-white w-64 min-h-dvw p-6 flex flex-col space-y-6">
+            <h1 class="text-2xl font-extrabold text-blue-300">Melodies</h1>
+            <!-- menu -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Menu</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./Menu.html"><span>🏠</span>Home</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./Discover.html"><span>🔍</span>Discover</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./Albums.html"><span>📀</span>Albums</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🎤</span>Artists</a></li>
+                </ul>
+            </div>
+            <!-- Library -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Library</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🕒</span>Recently Added</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔥</span>Most played</a></li>
+                </ul>
+            </div>
+            <!-- Playlist and favorite -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Playlist and favorite</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>❤️</span>Your favorites</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>📃</span>Your playlist</a></li>
+                    <li class="hover:bg-pink-500 hover:text-white rounded-[10px] pl-2 text-blue-300"><a href="#"><img
+                                class="w-4 inline-block mr-1" src="./IMG/add-playlist.png">Add playlist</a></li>
+                </ul>
+            </div>
+            <!-- general -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">General</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>⚙️</span>Setting</a></li>
+                    <li class="hover:bg-pink-500 hover:text-white rounded-[10px] pl-2 text-pink-400"><a href="#"><img
+                                class="w-4 inline-block mr-1" src="./IMG/log-out.png">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="flex-1 bg-linear-to-r from-[#0C0B0B] to-[#412c3a] w-6xl p-6">
+            <!-- banner -->
+            <div class="relative bg-[url(./IMG/Eminem-artist.png)] w-[1024px] h-[420px] mr-auto ml-auto">
+                <nav>
+                    <div class="flex justify-between mb-0">
+                        <a class="mt-10 ml-5" href="#"><img src="./IMG/arrow-back.png" alt="back"></a>
+                        <div class="flex gap-6 mr-6 mt-10">
+                            <ul class="flex gap-4 text-white">
+                                <li><a href="#">Share</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Premium</a></li>
+                            </ul>
+                            <a href="#"><img src="./IMG/profile.png" alt="profile"></a>
+                        </div>
+
+                    </div>
+                </nav>
+                <h2 class="text-white text-[96px] font-bold absolute bottom-4 left-4">Eminem</h2>
+            </div>
+            <!-- popular -->
+            <!-- Top trending -->
+            <div class="w-[1024px] mt-10 mx-auto">
+                <h2 class="text-2xl text-white font-bold mb-2">Popular</h2>
+                <div class="flex justify-between text-white">
+                    <span></span>
+                    <span class="pl-32">Release Date</span>
+                    <span>Played</span>
+                    <span class="pr-5">Time</span>
+                </div>
+                <!-- song list -->
+                <!-- #1 -->
+                <div class="flex justify-between relative h-15 mt-2 bg-[#1E1E1E] rounded-md">
+                    <div class="flex text-white gap-2 w-1/4 pl-3">
+                        <span class="self-center">1</span>
+                        <a href="#"><img src="./IMG/WithoutMe.png" alt="Without Me"></a>
+                        <div class="flex self-center flex-col">
+                            <h3 class="font-bold">Without Me</h3>
+                            <p class="text-xs font-thin opacity-70">Eminem</p>
+                        </div>
+                    </div>
+                    <div class="self-center absolute left-92">
+                        <span class="text-gray-300">May 15, 2002</span>
+                    </div>
+                    <div class="self-center">
+                        <span class="text-gray-300 w-auto pl-65">21,215,618</span>
+                    </div>
+                    <div class="self-center">
+                        <div class="flex gap-2 px-5">
+                            <img src="./IMG/heart.png" alt="heart">
+                            <span class="text-white">4:50</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #2 -->
+                <div class="flex relative justify-between h-15 mt-2 bg-[#1E1E1E] rounded-md">
+                    <div class="flex text-white gap-2 pl-3">
+                        <span class="self-center">2</span>
+                        <a href="#"><img src="./IMG/MockingBird.png" alt="mockingbird "></a>
+                        <div class="flex self-center flex-col">
+                            <h3 class="font-bold">Mockingbird </h3>
+                            <p class="text-xs font-thin opacity-70">Eminem</p>
+                        </div>
+                    </div>
+                    <div class="absolute self-center left-92">
+                        <span class="text-gray-300">Apr 25, 2005</span>
+                    </div>
+                    <div class="self-center">
+                        <span class="text-gray-300 w-auto pl-80">19,856,112</span>
+                    </div>
+                    <div class="self-center">
+                        <div class="flex gap-2 px-5">
+                            <img src="./IMG/heart.png" alt="heart">
+                            <span class="text-white">4:10</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #3 -->
+                <div class="flex relative justify-between h-15 mt-2 bg-[#1E1E1E] rounded-md">
+                    <div class="flex text-white gap-2 pl-3">
+                        <span class="self-center">3</span>
+                        <a href="#"><img src="./IMG/TheRealSlim.png" alt="The Real Slim Sha.."></a>
+                        <div class="flex self-center flex-col">
+                            <h3 class="font-bold">The Real Slim Sha..</h3>
+                            <p class="text-xs font-thin opacity-70">Eminem</p>
+                        </div>
+                    </div>
+                    <div class="absolute self-center left-92">
+                        <span class="text-gray-300">Nov 30, 2023</span>
+                    </div>
+                    <div class="self-center">
+                        <span class="text-gray-300 inline-block w-auto pl-70">16,654,223</span>
+                    </div>
+                    <div class="self-center">
+                        <div class="flex gap-2 px-5">
+                            <img src="./IMG/heart.png" alt="heart">
+                            <span class="text-white">4:44</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #4 -->
+                <div class="flex relative justify-between h-15 mt-2 bg-[#1E1E1E] rounded-md">
+                    <div class="flex text-white gap-2 pl-3">
+                        <span class="self-center">4</span>
+                        <a href="#"><img src="./IMG/LoseYourself.png" alt="Lose Yourself"></a>
+                        <div class="flex self-center flex-col">
+                            <h3 class="font-bold">Lose Yourself</h3>
+                            <p class="text-xs font-thin opacity-70">Eminem</p>
+                        </div>
+                    </div>
+                    <div class="absolute self-center left-92">
+                        <span class="text-gray-300">Nov 30, 2023</span>
+                    </div>
+                    <div class="self-center">
+                        <span class="text-gray-300 inline-block w-auto pl-80">16,240,390</span>
+                    </div>
+                    <div class="self-center">
+                        <div class="flex gap-2 px-5">
+                            <img src="./IMG/heart.png" alt="heart">
+                            <span class="text-white">5:22</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #5 -->
+                <div class="flex relative justify-between h-15 mt-2 bg-[#1E1E1E] rounded-md">
+                    <div class="flex text-white gap-2 pl-3">
+                        <span class="self-center">5</span>
+                        <a href="#"><img src="./IMG/pain-on-town.png" alt="Godzilla"></a>
+                        <div class="flex self-center flex-col">
+                            <h3 class="font-bold">Godzilla</h3>
+                            <p class="text-xs font-thin opacity-70">Eminem</p>
+                        </div>
+                    </div>
+                    <div class="absolute self-center left-92">
+                        <span class="text-gray-300">Nov 30, 2023</span>
+                    </div>
+                    <div class="self-center">
+                        <span class="text-gray-300 inline-block w-auto pl-90">14,367,500</span>
+                    </div>
+                    <div class="self-center">
+                        <div class="flex gap-2 px-5">
+                            <img src="./IMG/heart.png" alt="heart">
+                            <span class="text-white">3:30</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- show all -->
+                <div
+                    class="flex gap-4 justify-center bg-pink-500 h-10 w-20 rounded-md items-center mt-2 mr-auto ml-auto">
+                    <a class="text-white text-sm font-bold" href="#">
+                        Show All
+                    </a>
+                </div>
+
+            </div>
+            <!-- Artist's Albums -->
+            <div class="w-[1024px] mt-10 mx-auto">
+                <h2 class="text-2xl text-white font-bold">Artist's <span class="text-blue-400">Albums</span></h2>
+                <!-- Album list -->
+                <div class="flex gap-10 mt-10">
+                    <a href="#"><img src="./IMG/EminemShow.png" alt="The Eminem Show"></a>
+                    <a href="#"><img src="./IMG/Encore.png" alt="Encore"></a>
+                    <a href="#"><img src="./IMG/MusicTobeMurder.png" alt="Music to be murdered"></a>
+                    <a href="#"><img src="./IMG/Revovery.png" alt="Recovery"></a>
+                    <a href="#"><img src="./IMG/EminemTheSlim.png" alt="Eminem The Slim"></a>
+                    <div class="self-center">
+                        <img src="./IMG/Group 21.png" alt="add more">
+                        <a class="text-white" href="#">View All</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Songs -->
+
+            <div class="w-[1024px]  mt-10 mx-auto">
+                <h2 class="text-2xl text-white font-bold">Single <span class="text-pink-400">Songs</span></h2>
+                <!-- songs -->
+                <div class="flex gap-10 mt-10">
+                    <a href="#"><img src="./IMG/LaceIt.png" alt="Lace it"></a>
+                    <a href="#"><img src="./IMG/Realesc.png" alt="Realesc"></a>
+                    <a href="#"><img src="./IMG/FromD2LBC.png" alt="From the D 2 the LBC"></a>
+                    <a href="#"><img src="./IMG/911.png" alt="911"></a>
+                    <a href="#"><img src="./IMG/Killshot.png" alt="Killshot"></a>
+                    <div class="self-center ">
+                        <img src="./IMG/Group 21.png" alt="add more">
+                        <a class="text-white" href="#">View All</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Artist's Playlist -->
+            <div class="w-[1024px] mt-10 mx-auto">
+                <h2 class="text-2xl text-white font-bold">Artist's <span class="text-pink-400">Playlist</span></h2>
+                <!-- Playlist -->
+                <div class="flex gap-10 mt-10">
+                    <a href="#"><img src="./IMG/FullCollection.png" alt="Full Colletion"></a>
+                    <a href="#"><img src="./IMG/BestOfEminem.png" alt="Best of Eminem"></a>
+                    <a href="#"><img src="./IMG/OldSongs.png" alt="Old Songs"></a>
+                    <a href="#"><img src="./IMG/FanFavorite.png" alt="Fan Favorite"></a>
+                    <a href="#"><img src="./IMG/NewRelease.png" alt="New Release"></a>
+                    <div class="self-center ">
+                        <img src="./IMG/Group 21.png" alt="add more">
+                        <a class="text-white" href="#">View All</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Eminem Fans Also Listen To -->
+
+            <div class="w-[1028px]  mt-10 mx-auto">
+                <h2 class="text-2xl text-white font-bold">Eminem Fans <span class="text-pink-400">Artists</span></h2>
+                <!-- artists -->
+                <div class="flex gap-16 mt-10">
+                    <div class="flex flex-col gap-6">
+                        <img src="./IMG/50Cent.png" alt="50 Cent">
+                        <a class="text-white self-center" href="#">50 Cent</a>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <img src="./IMG/SnoopDog.png" alt="Snoop Dog">
+                        <a class="text-white self-center" href="#">Snoop Dog</a>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <img src="./IMG/Tupac.png" alt="Tupac">
+                        <a class="text-white self-center" href="#">Tupac</a>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <img src="./IMG/JayZ.png" alt="Jay-z">
+                        <a class="text-white self-center" href="#">Jay-z</a>
+                    </div>
+                    <div class="self-center">
+                        <img src="./IMG/Group 21.png" alt="add more">
+                        <a class="text-white" href="#">View All</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="flex text-white bg-[#412c3a] justify-between w-[1028px] p-4 mt-10 mx-auto">
+                    <div class="w-[350px]">
+                        <h2 class="text-2xl font-bold mb-4">About</h2>
+                        <p class="text-sm">Melodies is a website that has been created for over <span
+                                class="text-pink-400">5 years</span>
+                            now and it is one of the most famous music player websites in the world. In this website you
+                            can
+                            listen and download songs for free. Also of you want no limitation you can buy our <span
+                                class="text-blue-400">premium pass</span>.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-2xl font-bold">Melody</h2>
+                            <hr>
+                            <a href="#">Songs</a>
+                            <a href="#">Radio</a>
+                            <a href="#">Podcast</a>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-2xl font-bold">Access</h2>
+                            <hr>
+                            <a href="#">Explore</a>
+                            <a href="#">Artists</a>
+                            <a href="#">Playlists</a>
+                            <a href="#">Albums</a>
+                            <a href="#">Trending</a>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-2xl font-bold">Contact</h2>
+                            <hr>
+                            <a href="#">About</a>
+                            <a href="#">Policy</a>
+                            <a href="#">Social Media</a>
+                            <a href="#">Support</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between">
+                        <h2 class="text-2xl font-extrabold bg-clip-text bg-linear-to-r from-[#ee10b0] to-[#0e9eef] text-transparent self-center">Melodies</h2>
+                        <div class="flex gap-2">
+                            <a href="https://www.facebook.com/?locale=vi_VN"><img src="./IMG/facebook.png"
+                                    alt="facebook"></a>
+                            <a href="https://x.com/"><img src="./IMG/twitter.png" alt="twitter"></a>
+                            <a href="https://www.instagram.com/"><img src="./IMG/instagram.png" alt="facebook"></a>
+                            <a href="#"><img src="./IMG/call.png" alt="call"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Album Page</title>
+</head>
+
+<body class="min-h-screen bg-[#412c3a] text-white">
+    <div class="flex flex-col md:flex-row max-w-full">
+        <!-- Mobile top bar with hamburger -->
+        <header class="flex items-center justify-between p-4 md:hidden bg-[#0E1920]">
+            <div class="flex items-center gap-3">
+                <button id="toggleSidebar" aria-label="Toggle menu"
+                    class="p-2 rounded-md bg-pink-500 text-black font-bold">☰</button>
+                <h1
+                    class="text-lg font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                    Melodies
+                </h1>
+            </div>
+            <div class="flex gap-2 auth-area">
+                <a class="px-3 py-1 bg-black rounded-full text-pink-400 font-bold" href="./Login.html">Login</a>
+                <a class="px-3 py-1 bg-pink-500 rounded-full text-black font-bold" href="./SignUp.html">Sign Up</a>
+            </div>
+        </header>
+
+        <!-- sidebar -->
+        <aside id="sidebar"
+            class="side-bar bg-[#0E1920] text-white w-full md:w-64 p-6 flex flex-col space-y-6 hidden md:flex md:sticky md:top-0 md:h-screen md:overflow-y-auto shrink-0">
+            <div class="md:block hidden">
+                <h1
+                    class="text-2xl font-extrabold bg-clip-text bg-gradient-to-r from-[#ee10b0] to-[#0e9eef] text-transparent">
+                    Melodies</h1>
+            </div>
+
+            <!-- menu -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Menu</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./index.html"><span>🏠</span> Home</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔍</span> Explore</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./AlbumsResponsive.html"><span>📀</span>
+                            Albums</a></li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="./ArtistResponsive.html"><span>🎤</span>
+                            Artists</a></li>
+                </ul>
+            </div>
+
+            <!-- Library -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Library</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./RecentlyResponsive.html"><span>🕒</span> Recently Added</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./MostPlayedResponsive.html"><span>🔥</span> Most played</a></li>
+                </ul>
+            </div>
+
+            <!-- Playlist and favorite -->
+            <div>
+                <h2 class="text-sm text-pink-400 mb-2">Playlist and favorite</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./FavouriteResponsive.html"><span>❤️</span> Your favorites</a>
+                    </li>
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a
+                            href="./PlaylistResponsive.html"><span>📃</span> Your playlist</a></li>
+                </ul>
+            </div>
+
+            <!-- general -->
+            <!-- <div>
+                <h2 class="text-sm text-pink-400 mb-2">General</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>⚙️</span> Setting</a></li>
+                </ul>
+            </div> -->
+        </aside>
+
+        <!-- main content -->
+        <main class="flex-1 w-full bg-gradient-to-r from-[#0E1920] to-[#412c3a]">
+            <div class="w-full min-h-screen">
+                <nav>
+                    <div class="flex items-center justify-between pt-4 md:pt-10 px-4 md:px-8 mb-3">
+                        <h1 class="text-2xl md:text-3xl font-bold text-blue-500 mx-auto">Alb<span
+                                class="text-pink-500">um</span></h1>
+                        <!-- <img class="cursor-pointer w-5 md:w-6 h-5 md:h-6" src="./IMG/menu-list.png" alt="menu list"> -->
+                    </div>
+                </nav>
+
+                <div
+                    class="mx-2 md:mx-4 lg:mx-auto lg:max-w-4xl bg-gradient-to-r from-red-600 to-red-500/80 rounded-xl py-2">
+
+                    <!-- Album playing -->
+                    <div
+                        class="flex flex-col sm:flex-row justify-between gap-3 md:gap-4 text-white bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] mt-2 rounded-xl p-3 md:p-4 shadow-lg">
+                        <div class="flex-shrink-0 flex justify-center sm:justify-start">
+                            <img class="w-32 md:w-40 lg:w-48 h-32 md:h-40 lg:h-48 object-cover rounded"
+                                src="./IMG/EminemShow-1.png" alt="Eminem show">
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center gap-2 md:gap-3">
+                            <h2 class="text-lg md:text-xl lg:text-2xl font-bold">The Eminem Show</h2>
+                            <div class="flex items-center gap-2">
+                                <img class="w-5 md:w-6 h-5 md:h-6 rounded-full" src="./IMG/Eminem-1.png" alt="Eminem">
+                                <p class="text-sm md:text-base">Eminem</p>
+                            </div>
+                            <div class="flex items-center gap-2 md:gap-3 text-xs md:text-sm">
+                                <p>20 songs</p>
+                                <img class="self-center w-3" src="./IMG/dot.png" alt="dot icon">
+                                <p>1h 14m</p>
+                                <a href="#"><img class="w-5 md:w-6 ml-2" src="./IMG/octicon_play-16.png"
+                                        alt="play symbol"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- song list -->
+                    <div class="flex flex-col gap-2 md:gap-3 text-white mt-3 md:mt-4 px-1 md:px-2">
+                        <div class="flex justify-end gap-4 md:gap-5 items-center px-1">
+                            <span class="text-xs md:text-sm font-semibold">Time</span>
+                            <span class="text-xs md:text-sm font-semibold">More</span>
+                        </div>
+
+                        <!-- Song 1 -->
+                        <div
+                            class="flex justify-between bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] rounded-lg p-2 md:p-3 items-center">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <span class="px-2 text-xs md:text-base self-center">1</span>
+                                <div class="relative">
+                                    <img class="music-playing md:w-12 h-10 md:h-12 object-cover rounded cursor-pointer"
+                                        src="./IMG/EminemShow.png" alt="Eminem show">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-sm md:text-base font-semibold">White America</h3>
+                                    <p class="text-xs md:text-sm font-light">Eminem</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 md:gap-8">
+                                <p class="text-xs md:text-sm">5:24</p>
+                                <a href="#"><img src="./IMG/3-dots.png" alt="3 dots icon"></a>
+                            </div>
+                        </div>
+
+                        <!-- Song 2 -->
+                        <div
+                            class="flex justify-between bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] rounded-lg p-2 md:p-3 items-center">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <span class="px-2 text-xs md:text-base self-center">2</span>
+                                <div class="relative">
+                                    <img class="music-playing md:w-12 h-10 md:h-12 object-cover rounded cursor-pointer"
+                                        src="./IMG/EminemShow.png" alt="Eminem show">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-sm md:text-base font-semibold">Say What You Say</h3>
+                                    <p class="text-xs md:text-sm font-light">Eminem</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 md:gap-8">
+                                <p class="text-xs md:text-sm">5:09</p>
+                                <a href="#"><img src="./IMG/3-dots.png" alt="3 dots icon"></a>
+                            </div>
+                        </div>
+
+                        <!-- Song 3 -->
+                        <div
+                            class="flex justify-between bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] rounded-lg p-2 md:p-3 items-center">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <span class="px-2 text-xs md:text-base self-center">3</span>
+                                <div class="relative">
+                                    <img class="music-playing md:w-12 h-10 md:h-12 object-cover rounded cursor-pointer"
+                                        src="./IMG/EminemShow.png" alt="Eminem show">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-sm md:text-base font-semibold">Cleaning' Out My Closet</h3>
+                                    <p class="text-xs md:text-sm font-light">Eminem</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 md:gap-8">
+                                <p class="text-xs md:text-sm">4:57</p>
+                                <a href="#"><img src="./IMG/3-dots.png" alt="3 dots icon"></a>
+                            </div>
+                        </div>
+
+                        <!-- Song 4 -->
+                        <div
+                            class="flex justify-between bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] rounded-lg p-2 md:p-3 items-center">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <span class="px-2 text-xs md:text-base self-center">4</span>
+                                <div class="relative">
+                                    <img class="music-playing md:w-12 h-10 md:h-12 object-cover rounded cursor-pointer"
+                                        src="./IMG/EminemShow.png" alt="Eminem show">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-sm md:text-base font-semibold">Square Dance</h3>
+                                    <p class="text-xs md:text-sm font-light">Eminem</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 md:gap-8">
+                                <p class="text-xs md:text-sm">5:23</p>
+                                <a href="#"><img src="./IMG/3-dots.png" alt="3 dots icon"></a>
+                            </div>
+                        </div>
+
+                        <!-- Song 5 -->
+                        <div
+                            class="flex justify-between bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] rounded-lg p-2 md:p-3 items-center">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <span class="px-2 text-xs md:text-base self-center">5</span>
+                                <div class="relative">
+                                    <img class="music-playing md:w-12 h-10 md:h-12 object-cover rounded cursor-pointer"
+                                        src="./IMG/EminemShow.png" alt="Eminem show">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-sm md:text-base font-semibold">When The Music Stops</h3>
+                                    <p class="text-xs md:text-sm font-light">Eminem</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 md:gap-8">
+                                <p class="text-xs md:text-sm">4:29</p>
+                                <a href="#"><img src="./IMG/3-dots.png" alt="3 dots icon"></a>
+                            </div>
+                        </div>
+
+                        <!-- Song 6 -->
+                        <div
+                            class="flex justify-between bg-gradient-to-r from-[#e71c1c] to-[#6a1c27] rounded-lg p-2 md:p-3 items-center">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <span class="px-2 text-xs md:text-base self-center">6</span>
+                                <div class="relative">
+                                    <img class="music-playing md:w-12 h-10 md:h-12 object-cover rounded cursor-pointer"
+                                        src="./IMG/EminemShow.png" alt="Eminem show">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
+                                <div>
+                                    <h3 class="text-sm md:text-base font-semibold">Soldier</h3>
+                                    <p class="text-xs md:text-sm font-light">Eminem</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 md:gap-8">
+                                <p class="text-xs md:text-sm">3:46</p>
+                                <a href="#"><img src="./IMG/3-dots.png" alt="3 dots icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-6 md:h-8"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        toggleBtn?.addEventListener('click', () => {
+            if (!sidebar) return;
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('flex');
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
