@@ -11,6 +11,7 @@
 
 .repeat-active {
   filter: brightness(200%);
+  /* outline-color: green; */
 }
 
 .heart-active {

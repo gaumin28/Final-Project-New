@@ -240,4 +240,33 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(searchInput.value);
     });
   }
+
+  // Play all music
+  const playAllBtn = document.getElementById("play-all-button");
+  const playAllImg = document.getElementById("play-all");
+  // console.log(playAll);
+  let isPlayed = false;
+  if (playAllBtn) {
+    playAllBtn.addEventListener("click", function () {
+      if (!isPlayed) {
+        defaultAudio.play();
+        playAllImg.setAttribute("src", "./IMG/pause-icon.png");
+        isPlayed = true;
+      } else {
+        defaultAudio.pause();
+        playAllImg.setAttribute("src", "./IMG/pink-play.png");
+        isPlayed = false;
+      }
+    });
+  }
+
+  const heartFav = document.querySelectorAll(".fav-heart");
+  if (heartFav) {
+    heartFav.forEach(function (el) {
+      el.addEventListener("click", function () {
+        el.classList.toggle("repeat-active");
+        console.log("clicked");
+      });
+    });
+  }
 });
