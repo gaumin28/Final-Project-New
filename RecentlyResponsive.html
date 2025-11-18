@@ -114,13 +114,14 @@
 
                         <div class="flex-1 text-white">
                             <h2 class="text-2xl font-bold">Recently Added <span class="text-pink-500">Songs</span></h2>
-                            <p class="text-sm">tate mcree, nightmares, the neighberhood, doja cat and ...</p>
+                            <p class="text-sm">Tate Mcree, Nightmares, The Neighberhood, Doja Cat and ...</p>
                             <div class="mt-3 font-bold">20 songs <span class="text-pink-400">•</span> 1h 36m</div>
                         </div>
 
                         <div class="flex-shrink-0 flex items-center gap-3">
-                            <button class="text-pink-500 font-semibold">Play all</button>
-                            <img src="./IMG/pink-play.png" alt="play button" class="w-12 h-12" />
+                            <span class="text-pink-500 font-semibold">Play all</span>
+                            <button id="play-all-button" class="cursor-pointer" type="button"><img
+                                    src="./IMG/pink-play.png" alt="play button" id="play-all" class="size-8" /></button>
                         </div>
                     </div>
                 </section>
@@ -141,8 +142,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#1</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/Softcore.png"
-                                        alt="Softcore"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/Softcore.png" alt="Softcore">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Softcore</h3>
                                     <p class="text-xs font-thin opacity-70">The neighberhood</p>
@@ -164,8 +169,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#2</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/Skyfall.png"
-                                        alt="Skyfall"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/Skyfall.png" alt="Skyfall">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Skyfall Beats</h3>
                                     <p class="text-xs font-thin opacity-70">Nightmare</p>
@@ -186,8 +195,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#3</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/Greedy.png"
-                                        alt="Greedy"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/Greedy.png" alt="Greedy">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Greedy</h3>
                                     <p class="text-xs font-thin opacity-70">tate mcrae</p>
@@ -208,8 +221,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#4</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/Loving-me.png"
-                                        alt="Lovin On me"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/Loving-me.png" alt="Lovin">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Lovin On me</h3>
                                     <p class="text-xs font-thin opacity-70">jack harlow</p>
@@ -230,8 +247,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#5</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/pain-on-town.png"
-                                        alt="paint the town red"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/pain-on-town.png" alt="paint the town red">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Paint the town red</h3>
                                     <p class="text-xs font-thin opacity-70">Doja Cat</p>
@@ -252,8 +273,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#6</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/dancing.png"
-                                        alt="Dancin On Night"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/dancing.png" alt="dancing on night">
+                                    <img class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Dancin On Night</h3>
                                     <p class="text-xs font-thin opacity-70">Dualipa</p>
@@ -274,8 +299,12 @@
                             class="flex flex-col md:flex-row md:items-center md:justify-between bg-black rounded-md p-3">
                             <div class="flex items-center gap-3 md:w-1/2">
                                 <span class="text-pink-400 font-bold">#7</span>
-                                <a href="#"><img class="w-12 h-12 rounded object-cover" src="./IMG/water.png"
-                                        alt="Water"></a>
+                                <div class="relative"><img
+                                        class="music-playing w-12 h-12 rounded object-cover cursor-pointer"
+                                        src="./IMG/water.png" alt="water">
+                                    <img class="pause-overlay absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 pointer-events-none hidden"
+                                        src="./IMG/pause-icon.png" alt="pause icon" />
+                                </div>
                                 <div>
                                     <h3 class="font-bold">Water</h3>
                                     <p class="text-xs font-thin opacity-70">Tyla</p>
@@ -362,16 +391,6 @@
         </main>
     </div>
 
-    <script>
-        // toggle sidebar on mobile
-        const toggleBtn = document.getElementById('toggleSidebar');
-        const sidebar = document.getElementById('sidebar');
-        toggleBtn?.addEventListener('click', () => {
-            if (!sidebar) return;
-            sidebar.classList.toggle('hidden');
-            sidebar.classList.toggle('flex');
-        });
-    </script>
     <script src="./main.js"></script>
 </body>
 

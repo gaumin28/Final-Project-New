@@ -269,4 +269,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // sidebar
+  const toggleBtn = document.getElementById("toggleSidebar");
+  const sidebar = document.getElementById("sidebar");
+  toggleBtn?.addEventListener("click", () => {
+    if (!sidebar) return;
+    sidebar.classList.toggle("hidden");
+    sidebar.classList.toggle("flex");
+  });
 });
