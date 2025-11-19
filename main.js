@@ -278,4 +278,22 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.toggle("hidden");
     sidebar.classList.toggle("flex");
   });
+
+  //slide images
+  const panels = document.querySelectorAll(".panel");
+  // function remove
+  function removeActiveClass() {
+    panels.forEach(function (item) {
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
+      }
+      // item.classList.toggle("active");
+    });
+  }
+  panels.forEach(function (item) {
+    item.addEventListener("click", function () {
+      removeActiveClass();
+      item.classList.add("active");
+    });
+  });
 });

@@ -21,3 +21,16 @@
 .pause-overlay.active-playing {
   display: block;
 }
+
+.panel {
+  transition: flex 0.7s;
+}
+
+.panel.active {
+  flex: 10;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 1s 0.7s;
+}
