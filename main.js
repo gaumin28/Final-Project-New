@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (back) location.assign(back);
         return;
       }
-      alert("Invalid credentials");
+      alert("Invalid username");
     });
   }
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // repeat icon
 
-  const repeatButton = document.getElementById("repeat-icon");
+  const repeatButton = document.querySelector("#repeat-icon");
   if (repeatButton) {
     repeatButton.addEventListener("click", function () {
       repeatButton.classList.toggle("repeat-active");
@@ -236,6 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
     searchIcon.addEventListener("click", function (event) {
       if (searchInput.value.trim().toLowerCase() === "eminem") {
         window.location.href = "./EminemPageResponsive.html";
+      } else {
+        alert(`${searchInput.value} not found`);
       }
       console.log(searchInput.value);
     });

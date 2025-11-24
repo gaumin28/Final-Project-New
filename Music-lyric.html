@@ -25,7 +25,7 @@
                     <img class="size-[200px] rounded-full mx-auto mb-4" src="./IMG/EminemShow-1.png" alt="Eminem show">
                     <div
                         class="h-[35px] w-[350px] bg-[#630a4a] rounded-lg flex items-center justify-around mx-auto pr-2">
-                        <a href="#">
+                        <a href="./Music-Eminem.html">
                             <div class="flex gap-3 h-[29px] w-[175px] justify-center items-center rounded-lg">
                                 <img src="./IMG/mdi_music.png" alt="music icon">
                                 <span class="text-white text-[14px] font-extrabold">Song</span>
@@ -41,7 +41,8 @@
                     </div>
                 </div>
                 <div class="text-white text-center">
-                    <h1 class="text-[32px] font-extrabold text-[#ee10b0] text-shadow-[3px_6px_4px_black]">White America</h1>
+                    <h1 class="text-[32px] font-extrabold text-[#ee10b0] text-shadow-[3px_6px_4px_black]">White America
+                    </h1>
                     <h2 class="text-[20px] font-bold">Eminem</h2>
                     <p class="text-[14px] opacity-60">Look at these eyes baby blue baby just like yourself</p>
                     <p class="text-[14px] opacity-60">If they were brown</p>
@@ -56,17 +57,26 @@
                 <div class="flex flex-col gap-6 mx-auto">
                     <img src="./IMG/equalizer.png" alt="equalizer">
                     <div class="flex justify-evenly">
-                        <img class="cursor-pointer" src="./IMG/repeat-icon.png" alt="repeat-icon">
-                        <img class="cursor-pointer" src="./IMG/back-icon.png" alt="back-icon">
-                        <img class="cursor-pointer" src="./IMG/pause-icon-1.png" alt="pause-icon">
-                        <img class="cursor-pointer" src="./IMG/next-icon.png" alt="next-icon">
-                        <img class="cursor-pointer" src="./IMG/playlist-new.png" alt="playlist-new">
+                        <img id="repeat-icon" class="cursor-pointer size-12 self-center" src="./IMG/repeat-icon.png"
+                            alt="repeat-icon">
+                        <a class="self-center" href="./Music-Eminem.html"><img class="cursor-pointer size-12"
+                                src="./IMG/back-icon.png" alt="back-icon"></a>
+                        <img class="cursor-pointer play-music" src="./IMG/pink-play.png" alt="play">
+                        <a class="self-center" href="./Music-Eminem.html"><img class="cursor-pointer size-12"
+                                src="./IMG/next-icon.png" alt="next-icon"></a>
+                        <a class="self-center" href="./Audio/audio.mp3" download="audio.mp3"><svg
+                                class="size-9 text-pink-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M256 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 242.7 256 32zM64 320c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-46.9 0-56.6 56.6c-31.2 31.2-81.9 31.2-113.1 0L110.9 320 64 320zm304 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                            </svg></a>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+    <!-- js -->
+    <script src="./main.js"></script>
 </body>
 
 </html>
