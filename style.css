@@ -34,3 +34,9 @@
   opacity: 1;
   transition: opacity 1s 0.7s;
 }
+
+/* Policy hover effect */
+.policy-container:hover .policy-hover-text {
+  opacity: 1;
+  visibility: visible;
+}
